@@ -1,0 +1,29 @@
+/* styles.css */
+:root {
+    --background-color-light: #ffffff;
+    --text-color-light: #000000;
+    --background-color-dark: #001529;
+    --text-color-dark: #ffffff;
+    --bg-secondary-light: #F7F9FB;
+    --bg-secondary-dark: #FFFFFF0D;
+  }
+  
+  body.light {
+    background-color: var(--background-color-light);
+    color: var(--text-color-light);
+  }
+  
+  body.dark {
+    background-color: var(--background-color-dark);
+    color: var(--text-color-dark);
+  }
+  
+  .toggle-btn {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+  }
+  

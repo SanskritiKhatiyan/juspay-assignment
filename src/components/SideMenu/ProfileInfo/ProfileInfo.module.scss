@@ -1,0 +1,42 @@
+@import "../../../common.module.scss";
+
+.root {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 16px;
+  @extend .global-font;
+  .name_wrapper {
+    padding: 4px;
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    .image {
+      & > img {
+        object-fit: cover;
+        height: 24px;
+        width: 24px;
+      }
+    }
+  }
+  .two_options {
+    display: flex;
+    gap: 8px;
+    .head{
+        padding: 4px 8px;
+        cursor: pointer;
+        @extend .global-heading;
+    }
+  }
+  .options_list {
+    display: flex;
+    gap: 4px;
+    flex-direction: column;
+    .option_wrapper {
+      display: flex;
+      gap: 8px;
+      padding: 4px 8px;
+      align-items: center;
+    }
+  }
+}

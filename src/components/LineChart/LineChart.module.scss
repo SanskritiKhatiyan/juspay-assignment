@@ -1,0 +1,50 @@
+@import "../../common.module.scss";
+
+.root {
+  padding: 24px;
+  min-width: 65%;
+  background-color: #f7f9fb;
+  border-radius: 16px;
+  @extend .global-font;
+
+  .heading {
+    display: flex;
+    gap: 16px;
+
+    .title {
+      padding-right: 16px;
+      @extend .global-heading;
+    }
+
+    .head_desc_current {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      .dot {
+        height: 10px;
+        width: 10px;
+        border-radius: 50%;
+        background-color: black;
+      }
+      .numbers {
+        margin-left: 8px;
+        font-weight: bold;
+      }
+    }
+    .head_desc_prev {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      .dot {
+        height: 10px;
+        width: 10px;
+        border-radius: 50%;
+        background-color: #a8c5da;
+      }
+      .numbers {
+        margin-left: 8px;
+        font-weight: bold;
+      }
+    }
+  }
+}

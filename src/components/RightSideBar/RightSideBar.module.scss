@@ -1,0 +1,118 @@
+@import "../../common.module.scss";
+
+.root {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 20px;
+  max-width: 280px;
+  position: absolute;
+  right: 0px;
+  top: 0;
+  height: 100vh;
+  @extend .global-font;
+
+  .notifications {
+    .head {
+      padding: 8px 4px;
+      margin-bottom: 8px;
+      @extend .global-heading;
+    }
+    .notification_list {
+      display: flex;
+      gap: 8px;
+      flex-direction: column;
+      .notification_wrapper {
+        display: flex;
+        gap: 8px;
+        padding: 4px;
+        .image {
+          height: 24px;
+          width: 24px;
+          object-fit: cover;
+        }
+        .desc {
+          display: flex;
+          gap: 4px;
+          flex-direction: column;
+          .title {
+            @extend .global-font-14-regular;
+          }
+          .subtitle {
+            color: #1c1c1c66;
+          }
+        }
+      }
+    }
+  }
+  .timeline {
+    .head {
+      padding: 8px 4px;
+      margin-bottom: 8px;
+      @extend .global-heading;
+    }
+    .text {
+      position: relative;
+      .line {
+        background-color: grey;
+        position: absolute;
+        left: 15px;
+        top: 4px;
+        width: 1px;
+        height: 80%;
+      }
+
+      .notification_list {
+        display: flex;
+        gap: 8px;
+        flex-direction: column;
+        .notification_wrapper {
+          display: flex;
+          gap: 8px;
+          padding: 4px;
+          .image {
+            z-index: 10;
+            height: 24px;
+            width: 24px;
+            object-fit: cover;
+          }
+          .desc {
+            display: flex;
+            gap: 4px;
+            flex-direction: column;
+            .title {
+              @extend .global-font-14-regular;
+            }
+            .subtitle {
+              color: #1c1c1c66;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .contacts {
+    .head {
+      padding: 8px 4px;
+      margin-bottom: 8px;
+      @extend .global-heading;
+    }
+    .contact_list {
+      display: flex;
+      gap: 8px;
+      flex-direction: column;
+      .contact_wrapper {
+        display: flex;
+        gap: 8px;
+        padding: 4px;
+        align-items: center;
+        .image {
+          height: 24px;
+          width: 24px;
+          object-fit: cover;
+        }
+      }
+    }
+  }
+}

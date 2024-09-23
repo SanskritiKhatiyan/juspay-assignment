@@ -1,0 +1,43 @@
+@import "../../common.module.scss";
+
+.root {
+  padding: 24px;
+  min-width: 65%;
+  background-color: #F7F9FB;
+  border-radius: 16px;
+  @extend .global-font;
+
+  .heading {
+    @extend .global-heading;
+  }
+  .table_wrapper {
+    .header_wrapper {
+      display: flex;
+      justify-content: space-between;
+      border-bottom: 1px solid rgba(28, 28, 28, 0.2);
+      .head{
+        padding: 12px 8px;
+      }
+      .name {
+        width: 30%;
+        padding-left: 0px;
+      }
+    }
+    .list_wrapper {
+      display: flex;
+      flex-direction: column;
+      .list {
+        display: flex;
+        justify-content: space-between;
+        &>div{
+            padding: 12px 8px;
+
+        }
+        .name {
+          width: 30%;
+          padding-left: 0px;
+        }
+      }
+    }
+  }
+}

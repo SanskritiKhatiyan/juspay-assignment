@@ -1,0 +1,24 @@
+@import "../../common.module.scss";
+
+.root{
+    max-width: 255px;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    box-sizing: border-box;
+    background-color: #F7F9FB;
+    border-radius: 16px;
+
+    .heading{
+        @extend .global-heading;
+    }
+    .list_item{
+        display: flex;
+        justify-content: space-between;
+        &>span{
+            display: flex;
+            align-items: center
+        };
+    }
+}

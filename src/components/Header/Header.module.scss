@@ -1,0 +1,34 @@
+@import "../../common.module.scss";
+
+.root{
+    position: absolute;
+    top: 0;
+    left: 245px;
+    padding: 20px 28px;
+    right: 210px;
+    display: flex;
+    justify-content: space-between;
+    @extend .global-font;
+
+    .left_hug{
+        display: flex;
+        gap: 8px;
+        align-items: center;
+        .icon_list{
+            width: fit-content;
+            display: flex;
+            gap: 8px;
+        }
+    }
+    .right_hug{
+        display: flex;
+        gap: 20px;
+        .icon_list{
+            width: fit-content;
+            display: flex;
+            gap: 8px;
+
+
+        }
+    }
+}

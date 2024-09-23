@@ -1,0 +1,46 @@
+@import "../../common.module.scss";
+
+.root {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 28px;
+  max-width: fit-content;
+  @extend .global-font;
+
+  .box_wrapper {
+    border-radius: 16px;
+    padding: 24px;
+    width: 202px;
+    color: black !important;
+    .title{
+      @extend .global-heading;
+    }
+    .numbers_wrapper {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 8px;
+      .total{
+        @extend .global-extra-bold;
+      }
+      .profit_loss {
+        display: flex;
+        gap: 4px;
+        align-items: center;
+      }
+    }
+  }
+  .box1 {
+    background-color: #e3f5ff;
+  }
+  .box2 {
+    background-color: #F7F9FB;
+  }
+  .box3 {
+    background-color: #F7F9FB;
+  }
+  .box4 {
+    background-color: #E5ECF6;
+  }
+}
