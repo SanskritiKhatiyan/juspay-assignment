@@ -17,7 +17,7 @@ const dashboardItems = [
   },
   {
     key: "d2",
-    label: "eCommerce",
+    label: "Redeplooy",
     icon: <AppstoreOutlined />,
     children: [
       {
@@ -154,7 +154,7 @@ const pagesItems = [
 
 export const MenuBar = () => {
   const { theme } = useTheme();
-  
+
   const [current, setCurrent] = useState("1");
 
   const onClick = (e) => {
@@ -169,14 +169,14 @@ export const MenuBar = () => {
         onClick={onClick}
         style={{
           width: 212,
-          paddingBottom: "12px"
+          paddingBottom: "12px",
         }}
         selectedKeys={[current]}
         mode="inline"
         items={dashboardItems}
       />
 
-<div className={s.heading}>Pages</div>
+      <div className={s.heading}>Pages</div>
       <Menu
         theme={theme}
         onClick={onClick}
