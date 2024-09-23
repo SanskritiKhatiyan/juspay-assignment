@@ -14,12 +14,20 @@
   .heading {
     @extend .global-heading;
   }
+  .row_upper{
+    display: flex;
+    justify-content: space-between;
+    gap: 28px;
+    & > div {
+      width: 63%;
+    }
+  }
   .row {
     display: flex;
     justify-content: space-between;
     gap: 28px;
     & > div {
-      width: 80%;
+      width: 70%;
     }
   }
 }

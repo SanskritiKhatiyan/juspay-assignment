@@ -1,7 +1,11 @@
 import s from "./MapLocation.module.scss";
-import Map from "../../assets/worldMap.webp"
+import Map from "../../assets/worldMap.webp";
+import { useTheme } from "../../themeContext";
+import cn from "classnames"
 
 export const MapLocation = () => {
+  const {theme} = useTheme();
+
   const MapLocationsData = [
     {
       country: "New York",
@@ -26,7 +30,7 @@ export const MapLocation = () => {
   ];
 
   return (
-    <div className={s.root}>
+    <div className={cn(s.root, {[s.dark]: theme==="dark"})}>
       <div className={s.heading}>Revenue by Location</div>
       <img className={s.country_image} src={Map}/>
       <div className={s.location_list}>

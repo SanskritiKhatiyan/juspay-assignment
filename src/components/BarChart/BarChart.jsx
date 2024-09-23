@@ -11,6 +11,7 @@ import {
   Legend,
 } from "chart.js";
 import { useTheme } from "../../themeContext";
+import cn from "classnames"
 
 ChartJS.register(
   CategoryScale,
@@ -22,7 +23,7 @@ ChartJS.register(
 );
 
 export const BarChart = () => {
-  // const labels = Utils.months({count: 7});
+  const {theme} = useTheme();
 
   const data = {
     labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun"],
@@ -77,10 +78,8 @@ export const BarChart = () => {
     },
   };
 
-  const {theme} = useTheme();
-
   return (
-    <div className={s.root}>
+    <div className={cn(s.root, {[s.dark]: theme==="dark"})}>
       <div className={s.heading}>Projections vs Actuals</div>
       <Bar data={data} options={options} />
     </div>

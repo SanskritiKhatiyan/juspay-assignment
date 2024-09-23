@@ -6,24 +6,33 @@
     --text-color-dark: #ffffff;
     --bg-secondary-light: #F7F9FB;
     --bg-secondary-dark: #FFFFFF0D;
+    --border-light: #1C1C1C1A;
+    --border-dark: #FFFFFF1A,
   }
   
   body.light {
     background-color: var(--background-color-light);
     color: var(--text-color-light);
+    border: var(--border-light);
   }
   
   body.dark {
     background-color: var(--background-color-dark);
     color: var(--text-color-dark);
+    border: var(--border-dark),
   }
   
   .toggle-btn {
-    margin-top: 20px;
-    padding: 10px;
+    margin-left: 20px;
+    padding: 4px 8px;
+    border-radius: 16px;
     background-color: #007bff;
     color: #fff;
     border: none;
     cursor: pointer;
+  }
+
+  .bg-dark{
+    background-color: #FFFFFF0D;
   }
   

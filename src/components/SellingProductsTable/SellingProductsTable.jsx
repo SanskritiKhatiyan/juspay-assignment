@@ -1,6 +1,10 @@
+import { useTheme } from "../../themeContext";
 import s from "./SellingProductsTable.module.scss";
-import cn from "classnames"
+import cn from "classnames";
+
 export const SellingProductsTable = () => {
+  const {theme} = useTheme();
+
   const tableHeading = ["Name", "Price", "Quantity", "Amount"];
   const TableData = [
     {
@@ -28,12 +32,6 @@ export const SellingProductsTable = () => {
       amount: "$9,176.67",
     },
     {
-      name: "Full sleeve shirt",
-      price: "$19.49",
-      quantity: "45",
-      amount: "$9,176.67",
-    },
-    {
       name: "ASOS Ridley low waist",
       price: "$79.49",
       quantity: "82",
@@ -47,7 +45,7 @@ export const SellingProductsTable = () => {
     },
   ];
   return (
-    <div className={s.root}>
+    <div className={cn(s.root, {[s.dark]: theme==="dark"})}>
       <div className={s.heading}>Top Selling Products</div>
       <div className={s.table_wrapper}>
         <div className={s.header_wrapper}>

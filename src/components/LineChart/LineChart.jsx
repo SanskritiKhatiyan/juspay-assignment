@@ -7,10 +7,14 @@ import {
   LinearScale,
   PointElement,
 } from "chart.js";
+import cn from "classnames"
+import { useTheme } from "../../themeContext";
 
 ChartJS.register(LineElement, CategoryScale, LinearScale, PointElement);
 
 export const LineChart = () => {
+  const {theme} = useTheme();
+
   const data = {
     labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun"],
     datasets: [
@@ -60,7 +64,7 @@ export const LineChart = () => {
   };
 
   return (
-    <div className={s.root}>
+    <div className={cn(s.root, {[s.dark]: theme==="dark"})}>
       <div className={s.heading}>
         <div className={s.title}>Revenue</div>
         <div className={s.head_desc_current}>

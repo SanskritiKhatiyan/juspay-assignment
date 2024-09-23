@@ -5,8 +5,12 @@ import Human3 from "../../assets/human3.webp"
 import Human4 from "../../assets/human1.webp";
 import Bug from "../../icons/Bug";
 import User from "../../icons/User";
+import cn from "classnames"
+import { useTheme } from "../../themeContext";
 
 export const RightSideBar = () => {
+  const {theme} = useTheme();
+
   const ContactData = [
     {
       name: "Natali Caraig",
@@ -72,7 +76,7 @@ export const RightSideBar = () => {
   ];
 
   return (
-    <div className={s.root}>
+    <div className={cn(s.root, {[s.dark]: theme==="dark"})}>
       <div className={s.notifications}>
         <div className={s.head}>Notifications</div>
         <div className={s.notification_list}>
@@ -82,7 +86,7 @@ export const RightSideBar = () => {
                 <div className={s.image}>{notification?.image} </div>
                 <div className={s.desc}>
                   <div className={s.title}>{notification?.title}</div>
-                  <div className={s.subtitle}>{notification?.subtitle}</div>
+                  <div className={cn(s.subtitle, {[s.dark]: theme==="dark"})}>{notification?.subtitle}</div>
                 </div>
               </div>
             );
@@ -101,7 +105,7 @@ export const RightSideBar = () => {
                   <img src={notification?.image} className={s.image} />
                   <div className={s.desc}>
                     <div className={s.title}>{notification?.title}</div>
-                    <div className={s.subtitle}>{notification?.subtitle}</div>
+                    <div className={cn(s.subtitle, {[s.dark]: theme==="dark"})}>{notification?.subtitle}</div>
                   </div>
                 </div>
               );

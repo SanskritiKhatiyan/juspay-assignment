@@ -10,6 +10,7 @@
   right: 0px;
   top: 0;
   height: 100vh;
+  border-left: 1px solid #1C1C1C1A;
   @extend .global-font;
 
   .notifications {
@@ -41,6 +42,9 @@
           .subtitle {
             color: #1c1c1c66;
           }
+          .dark{
+            color: #FFFFFF66
+           }
         }
       }
     }
@@ -86,6 +90,9 @@
             .subtitle {
               color: #1c1c1c66;
             }
+            .dark{
+             color: #FFFFFF66
+            }
           }
         }
       }
@@ -115,4 +122,7 @@
       }
     }
   }
+}
+  .dark{
+    border-left: 1px solid #333333;
 }

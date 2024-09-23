@@ -17,7 +17,7 @@ const dashboardItems = [
   },
   {
     key: "d2",
-    label: "Redeplooy",
+    label: "eCommerce",
     icon: <AppstoreOutlined />,
     children: [
       {

@@ -1,8 +1,22 @@
-import { Fragment, useState } from "react";
+import { Fragment, useState, useEffect } from "react";
 import s from "./ProfileInfo.module.scss";
 import Dot from "../../../icons/Dot";
 import Human1 from "../../../assets/human1.webp"
+import { ColorDisplay } from "../../../utils/common";
+import ThemeToggle from "../../../themeToggle";
+import { useTheme } from "../../../themeContext";
 
+const ThemedComponent = () => {
+  const { theme } = useTheme();
+
+  useEffect(() => {
+    document.body.className = theme; // Dynamically change body class based on the theme
+  }, [theme]);
+
+  return (
+      <ThemeToggle />
+  );
+};
 const FavoritesOptions = ["Overview", "Projects"];
 const RecentlyOptions = ["Random", "More"];
 
@@ -13,17 +27,18 @@ const NameInfo = () => {
         <img src={Human1} />
       </div>
       <div className={s.name}>ByWind</div>
+      <div><ThemedComponent/></div>
     </div>
   );
 };
 
-const Option = ({optionList}) => {
+const Option = ({optionList, color}) => {
   return (
     <Fragment>
       {optionList?.map((option) => {
         return (
           <div className={s.option_wrapper}>
-            <Dot height={16} width={16} color="#1C1C1C33"/>
+            <Dot height={16} width={16} color={color}/>
             {option}
           </div>
         );
@@ -33,6 +48,7 @@ const Option = ({optionList}) => {
 };
 
 export const ProfileInfo = () => {
+  const color= ColorDisplay();
   const [option, setOption] = useState("Favorites");
   return (
     <div className={s.root}>
@@ -44,9 +60,9 @@ export const ProfileInfo = () => {
       </div>
       <div className={s.options_list}>
         {option === "Favorites" ? (
-          <Option optionList={FavoritesOptions} />
+          <Option optionList={FavoritesOptions} color={color}/>
         ) : (
-          <Option optionList={RecentlyOptions} />
+          <Option optionList={RecentlyOptions} color={color}/>
         )}
       </div>
       </div>

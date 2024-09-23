@@ -5,9 +5,10 @@
     top: 0;
     left: 245px;
     padding: 20px 28px;
-    right: 210px;
+    right: 198px;
     display: flex;
     justify-content: space-between;
+    border-bottom: 1px solid #1C1C1C1A;
     @extend .global-font;
 
     .left_hug{
@@ -31,4 +32,7 @@
 
         }
     }
+}
+.dark{
+    border-bottom: 1px solid #333333;
 }

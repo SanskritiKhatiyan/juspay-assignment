@@ -5,14 +5,13 @@ import { NumberBigBoxes } from "../../components/NumberBigBoxes/NumberBigBoxes";
 import { PieChart } from "../../components/PieChart/PieChart";
 import { SellingProductsTable } from "../../components/SellingProductsTable/SellingProductsTable";
 import s from "./Dashboard.module.scss";
-import heading from "../../App.css";
 
 export const Dashboard = () => {
 
   return (
     <div className={s.root}>
       <div className={s.heading}>eCommerce</div>
-      <div className={s.row}>
+      <div className={s.row_upper}>
         <div><NumberBigBoxes /></div>
         <div><BarChart /></div>
       </div>

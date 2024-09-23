@@ -2,10 +2,14 @@ import s from "./PieChart.module.scss";
 import { Doughnut } from "react-chartjs-2";
 import { Chart as ChartJS, ArcElement, Tooltip, Legend } from "chart.js";
 import Dot from "../../icons/Dot";
+import { useTheme } from "../../themeContext";
+import cn from "classnames"
 
 ChartJS.register(ArcElement, Tooltip, Legend);
 
 export const PieChart = () => {
+  const {theme} = useTheme();
+
   const data = {
     labels: ["Direct", "Affiliate", "Sponsored", "E-mail"],
     datasets: [
@@ -28,7 +32,7 @@ export const PieChart = () => {
   };
 
   return (
-    <div className={s.root}>
+    <div className={cn(s.root, {[s.dark]: theme==="dark"})}>
       <div className={s.heading}>Total Sales</div>
 
       <Doughnut data={data} options={options} style={{ width: "100px" }} />
